@@ -39,6 +39,8 @@ class Crud(QWidget):
 
 		self.table = QTableView(self)
 
+
+		# Данные для подключения к БД
 		self.db = QtSql.QSqlDatabase.addDatabase('QMYSQL')
 		self.db.setHostName('localhost')
 		self.db.setDatabaseName('DBvishlist')
