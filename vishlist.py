@@ -44,8 +44,8 @@ class Crud(QWidget):
 		self.db = QtSql.QSqlDatabase.addDatabase('QMYSQL')
 		self.db.setHostName('localhost')
 		self.db.setDatabaseName('DBvishlist')
-		self.db.setUserName('my_user')
-		self.db.setPassword('password')
+		self.db.setUserName('user')
+		self.db.setPassword('pass')
 
 		self.model = QtSql.QSqlTableModel()
 		self.model.setTable('vishlist')
@@ -111,7 +111,9 @@ class Crud(QWidget):
 if __name__ == '__main__':
 	
 	import sys
+
 	app = QApplication(sys.argv)
 	ex = Crud()
 	sys.exit(app.exec_())
+
 
